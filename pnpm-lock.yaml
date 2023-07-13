@@ -4,6 +4,7 @@ specifiers:
   '@eggjs/tsconfig': ^1.1.0
   '@types/cheerio': ^0.22.1
   '@types/mocha': ^10.0.1
+  '@types/node': ^20.4.2
   cheerio: ^1.0.0-rc.2
   egg: ^3.11.0
   egg-bin: ^5.9.0
@@ -11,6 +12,7 @@ specifiers:
   egg-scripts: ^2.17.0
   eslint: ^8.31.0
   eslint-config-egg: ^12.1.0
+  mocha: ^10.2.0
   typescript: ^4.9.4
 
 dependencies:
@@ -21,11 +23,13 @@ devDependencies:
   '@eggjs/tsconfig': 1.3.3
   '@types/cheerio': 0.22.31
   '@types/mocha': 10.0.1
+  '@types/node': 20.4.2
   cheerio: 1.0.0-rc.12
-  egg-bin: 5.14.0_rv5zqelxfj57xamtslihd5zzym
-  egg-mock: 5.10.8_egg@3.17.3
+  egg-bin: 5.14.0_fosm3cvzmimx4swcjv3kvyewdy
+  egg-mock: 5.10.8_egg@3.17.3+mocha@10.2.0
   eslint: 8.44.0
   eslint-config-egg: 12.2.1_c6scop6gobf6637sntyzfiffg4
+  mocha: 10.2.0
   typescript: 4.9.5
 
 packages:
@@ -1799,7 +1803,7 @@ packages:
   /ee-first/1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  /egg-bin/5.14.0_rv5zqelxfj57xamtslihd5zzym:
+  /egg-bin/5.14.0_fosm3cvzmimx4swcjv3kvyewdy:
     resolution: {integrity: sha512-wjN8y87FnEoBpJDpPSmSOT0CaVMFQtpXhNFLSv0oJO8Dw5Xx5k8AD14+wFujt3y1TjK1DavCo+B6e3GfVRVPAQ==}
     engines: {node: '>= 14.0.0'}
     hasBin: true
@@ -1814,8 +1818,8 @@ packages:
       chalk: 4.1.2
       common-bin: 3.0.1
       detect-port: 1.5.1
-      egg-mock: 5.10.8_egg@3.17.3
-      egg-ts-helper: 1.34.7
+      egg-mock: 5.10.8_egg@3.17.3+mocha@10.2.0
+      egg-ts-helper: 1.34.7_@types+node@20.4.2
       egg-utils: 2.5.0
       globby: 11.1.0
       inspector-proxy: 1.2.3
@@ -1824,7 +1828,7 @@ packages:
       mochawesome-with-mocha: 7.1.3
       runscript: 1.5.3
       test: 3.3.0
-      ts-node: 10.9.1_typescript@4.9.5
+      ts-node: 10.9.1_3v26fpmfgn2ciwm7ypihuhruum
       tsconfig-paths: 4.2.0
       ypkgfiles: 1.6.0
     transitivePeerDependencies:
@@ -1959,7 +1963,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /egg-mock/5.10.8_egg@3.17.3:
+  /egg-mock/5.10.8_egg@3.17.3+mocha@10.2.0:
     resolution: {integrity: sha512-upZZn5liV5iF3ZTwe71VM4xEWiI/BYVlfveibbSIUPOVGsWSnnZMImKduP7Qzqe9gUjvXwIIEQyE5sIlwknbsw==}
     engines: {node: '>= 14.18.0'}
     peerDependencies:
@@ -1981,6 +1985,7 @@ packages:
       merge-descriptors: 1.0.1
       methods: 1.1.2
       mm: 3.3.0
+      mocha: 10.2.0
       sdk-base: 3.6.0
       supertest: 6.3.3
       urllib: 3.17.1
@@ -2081,7 +2086,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /egg-ts-helper/1.34.7:
+  /egg-ts-helper/1.34.7_@types+node@20.4.2:
     resolution: {integrity: sha512-gbWJAwPhvTJL2iqpK4kNpTiGR+vKfAGhsBpFF9U4GotzZPJj8M6/2pqqIqvicz24BijxxtqalsNIux1u6HFTUA==}
     engines: {node: '>= 14.0.0'}
     hasBin: true
@@ -2093,7 +2098,7 @@ packages:
       enquirer: 2.3.6
       globby: 11.1.0
       json5: 2.2.3
-      ts-node: 10.9.1_typescript@4.9.5
+      ts-node: 10.9.1_3v26fpmfgn2ciwm7ypihuhruum
       tslib: 2.6.0
       typescript: 4.9.5
       yn: 3.1.1
@@ -5267,7 +5272,7 @@ packages:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
 
-  /ts-node/10.9.1_typescript@4.9.5:
+  /ts-node/10.9.1_3v26fpmfgn2ciwm7ypihuhruum:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -5286,6 +5291,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
+      '@types/node': 20.4.2
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
