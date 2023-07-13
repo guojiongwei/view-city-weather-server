@@ -8,6 +8,7 @@ const appid = '6e0a1a871f03484c97c4f94e3d638df7' || process.env.WEATHER_KEY
 export default class NewsService extends Service {
   /** 根据城市名称获取经纬度 */
   public async getWeatherBuyCity(city: string) {
+    if (!city) return renderError(400, '城市名称不能为空!')
     const { ctx } = this
     const res = await ctx.curl<IGeoData[]>(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${appid}`, { dataType: 'json' })
     if (res.status === 200) {

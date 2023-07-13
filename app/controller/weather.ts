@@ -6,10 +6,6 @@ export default class HomeController extends Controller {
   public async index() {
     const { ctx, service } = this
     const { city } = ctx.query
-    if (!city) {
-      ctx.body = renderError(400, '城市名称不能为空!')
-      return
-    }
     try {
       const res = await service.weather.getWeatherBuyCity(city)
       ctx.body = res

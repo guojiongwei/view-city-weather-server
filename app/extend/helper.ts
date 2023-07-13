@@ -6,7 +6,7 @@ module.exports = {
       code: 200,
       message: '请求成功!',
       data,
-    };
+    }
   },
   /** 失败响应 */
   renderError(code: number, message: string) {
@@ -14,6 +14,6 @@ module.exports = {
       code,
       message,
       data: {},
-    };
+    }
   },
-};
+}
