@@ -13,7 +13,7 @@ export default class NewsService extends Service {
       const { lon, lat } = res.data[0];
       return this.getWeatherByGeo(lon, lat);
     } else {
-      return ctx.helper.renderError(res.status, res.res.statusMessage);
+      return ctx.helper.renderError(res.status, "获取天气信息失败!");
     }
   }
 
@@ -24,7 +24,7 @@ export default class NewsService extends Service {
     if (res.status === 200) {
       return ctx.helper.renderSuccess(res.data);
     } else {
-      return ctx.helper.renderError(res.status, res.res.statusMessage);
+      return ctx.helper.renderError(res.status, "获取天气信息失败!");
     }
   }
 }
