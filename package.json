@@ -7,7 +7,8 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start",
+    "start": "egg-scripts start --daemon --title=view-city-weather-server",
+    "stop": "egg-scripts stop --title=view-city-weather-server",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
