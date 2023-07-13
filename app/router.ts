@@ -1,8 +1,10 @@
-import { Application } from "egg";
+import { Application } from 'egg'
 
 export default (app: Application) => {
-  const { controller, router } = app;
+  const { controller, router } = app
 
-  router.get("/", controller.home.index);
-  router.get("/weather/getWeatherBuyCity", controller.weather.index);
-};
+  /** 首页 */
+  router.get('/', controller.home.index)
+  /** 根据城市获取天气接口 */
+  router.get('/weather/getWeatherBuyCity', controller.weather.index)
+}

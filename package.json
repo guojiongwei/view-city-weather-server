@@ -1,5 +1,5 @@
 {
-  "name": "hackernews-async-ts",
+  "name": "view-city-weather-server",
   "version": "1.0.0",
   "description": "hackernews showcase using typescript && egg",
   "private": true,
@@ -7,7 +7,7 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=view-city-weather-server",
+    "start": "npm run tsc && egg-scripts start --daemon --title=view-city-weather-server",
     "stop": "egg-scripts stop --title=view-city-weather-server",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",

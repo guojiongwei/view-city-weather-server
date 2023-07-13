@@ -4,7 +4,7 @@ module.exports = {
   renderSuccess<T>(data: T) {
     return {
       code: 200,
-      message: "请求成功!",
+      message: '请求成功!',
       data,
     };
   },
